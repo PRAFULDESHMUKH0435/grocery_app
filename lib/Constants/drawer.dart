@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/Pages/HomePage.dart';
 import 'package:grocery_app/Pages/LoginPage.dart';
+import 'package:grocery_app/Pages/ReviewCartPage.dart';
 
 import 'mylisttile.dart';
 class MyDrawer extends StatelessWidget {
@@ -39,7 +40,7 @@ class MyDrawer extends StatelessWidget {
               child: MyListTile('Home',Icons.home_outlined)),
           InkWell(
               onTap: (){
-                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>HomePage()));
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>ReviewCartPage()));
               },
               child: MyListTile('Review Cart',Icons.add_shopping_cart_outlined)),
           InkWell(

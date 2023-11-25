@@ -24,3 +24,9 @@ const vegistyle = TextStyle(decoration: TextDecoration.none,fontSize: 40,color: 
 ]);
 const signingstyle = TextStyle(decoration: TextDecoration.none,fontSize: 18,color: Colors.black);
 const termsandprivacypolicy = TextStyle(decoration: TextDecoration.none,fontSize: 14,color: Colors.grey);
+const splashscreentitlestyle = TextStyle(color: Colors.pinkAccent,fontSize: 30,fontWeight: FontWeight.bold,shadows: [
+  BoxShadow(
+    color: Colors.white,
+    offset: Offset(3, 3)
+  )
+]);

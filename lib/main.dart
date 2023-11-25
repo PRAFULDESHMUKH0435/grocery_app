@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/Constants/constants.dart';
-
-import 'Pages/HomePage.dart';
+import 'package:grocery_app/Pages/SplashPage.dart';
 void main(){
   runApp(MyApp());
 }
@@ -16,7 +15,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: appbarcolor,
       ),
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: SplashPage(),
     );
   }
 }
