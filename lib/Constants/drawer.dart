@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:grocery_app/Pages/HomePage.dart';
 import 'package:grocery_app/Pages/LoginPage.dart';
 import 'package:grocery_app/Pages/ReviewCartPage.dart';
-
 import 'mylisttile.dart';
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -25,7 +24,7 @@ class MyDrawer extends StatelessWidget {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('Welcome Guest',style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
+                      Text('Welcome Guest',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
                       OutlinedButton(onPressed: ()=>Navigator.of(context).push(MaterialPageRoute(builder: (context)=>LoginPage())), child: Text('Login',style: TextStyle(color: Colors.black,fontSize: 25,fontWeight: FontWeight.bold),))
                     ],
                   )
