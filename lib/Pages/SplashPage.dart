@@ -2,7 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:grocery_app/Pages/HomePage.dart';
+import 'package:grocery_app/Providers/ProductProvider.dart';
 import 'package:lottie/lottie.dart';
+import 'package:provider/provider.dart';
 
 import '../Constants/constants.dart';
 class SplashPage extends StatefulWidget {
@@ -16,11 +18,12 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   void initState() {
-    // TODO: implement initState
+
     super.initState();
     Timer(Duration(seconds: 5), () {
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>HomePage()));
     });
+
   }
 
   @override

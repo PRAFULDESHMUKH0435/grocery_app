@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/Constants/constants.dart';
-import 'package:grocery_app/Pages/SplashPage.dart';
-void main(){
+import 'package:grocery_app/Pages/HomePage.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:grocery_app/Providers/ProductProvider.dart';
+import 'package:provider/provider.dart';
+
+Future main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -10,12 +16,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        scaffoldBackgroundColor: appbarcolor,
+    return ChangeNotifierProvider(
+      create: (context)=>ProductProvider(),
+      child: MaterialApp(
+        theme: ThemeData(
+          scaffoldBackgroundColor: appbarcolor,
+        ),
+        debugShowCheckedModeBanner: false,
+        home: HomePage(),
       ),
-      debugShowCheckedModeBanner: false,
-      home: SplashPage(),
     );
   }
 }
